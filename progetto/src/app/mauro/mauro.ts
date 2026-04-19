@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mauro',
@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './mauro.css',
 })
 export class Mauro implements OnInit {
-  name: string;
-  constructor(){
-    this.name = "felipe"
+  @Input() name!: string; // Riceve UNA stringa alla volta
+  
+  constructor() {
+    // Lascia vuoto! Il nome arriverà dal padre
   }
-ngOnInit() {
-  }
+  ngOnInit() { }
 }
